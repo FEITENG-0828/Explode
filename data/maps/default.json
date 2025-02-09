@@ -1,0 +1,30 @@
+{
+    "maps":
+    [
+        {
+            "id":"4*4",
+            "rows":4,
+            "columns":4,
+            "shape":
+            [
+                "OOOO",
+                "OOOO",
+                "OOOO",
+                "OOOO"
+            ]
+        },
+        {
+            "id":"5*5",
+            "rows":5,
+            "columns":5,
+            "shape":
+            [
+                "OOOOO",
+                "OOOOO",
+                "OOOOO",
+                "OOOOO",
+                "OOOOO"
+            ]
+        }
+    ]
+}
