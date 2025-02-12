@@ -5,25 +5,25 @@
 
 namespace FEITENG
 {
-    class Player;
+    class PlayerState;
     class Block;
+    class BlockView;
 
     class Board
     {
-        private:
-            short rows, columns;
-            std::vector<std::vector<Block>> board;
+    private:
+        short rows, columns;
+        std::vector<std::vector<Block>> board;
 
-        public:
-            Board(short, short);
-            ~Board();
+    public:
+        Board(short, short);
+        ~Board();
 
-            bool chargeBlock(Player*, short, short);
-            void explode();
+        bool chargeBlock(PlayerState*, short, short);
+        bool explode();
 
-            void print() const;
+        std::vector<std::vector<BlockView>> getBoardView() const;
     };
 } // namespace FEITENG
 
 #endif // FEITENG_BOARD_H
-

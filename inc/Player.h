@@ -7,16 +7,15 @@ namespace FEITENG
 {
     class Player
     {
-        private:
-            std::string name;
+    private:
+        std::string name;
 
-        public:
-            Player(const std::string&);
-            ~Player();
+    public:
+        explicit Player(const std::string&);
+        ~Player();
 
-            std::string getName() const;
+        std::string getName() const;
     };
 } // namespace FEITENG
 
 #endif // FEITENG_PLAYER_H
-

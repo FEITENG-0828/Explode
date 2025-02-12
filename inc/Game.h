@@ -1,29 +1,29 @@
 #ifndef FEITENG_GAME_H
 #define FEITENG_GAME_H
 
-#include <list>
+#include <vector>
 
 #include "Board.h"
 
 namespace FEITENG
 {
+    class PlayerState;
     class Player;
+    class ConsoleRender;
 
     class Game
     {
-        private:
-            std::list<Player*> players;
-            Board board;
+    private:
+        std::vector<PlayerState> players;
+        Board board;
 
-        public:
-            Game(short, short);
-            ~Game();
+    public:
+        Game(short, short);
+        ~Game();
 
-            void addPlayer(Player*);
-            void removePlayer(Player*);
-            void run();
+        void addPlayer(Player*);
+        void run(const ConsoleRender&);
     };
 } // namespace FEITENG
 
 #endif // FEITENG_GAME_H
-
