@@ -22,6 +22,8 @@ namespace FEITENG
         ~Game();
 
         void addPlayer(Player*);
+        void updatePlayerState();
+        bool checkWinner() const;
         void run(const ConsoleRender&);
     };
 } // namespace FEITENG

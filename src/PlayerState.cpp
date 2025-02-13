@@ -2,7 +2,7 @@
 
 namespace FEITENG
 {
-    PlayerState::PlayerState(Player* player): player(player), is_dead(false)
+    PlayerState::PlayerState(Player* player): player(player), state(State::NOT_STARTED)
     { }
 
     PlayerState::~PlayerState()
@@ -13,13 +13,18 @@ namespace FEITENG
         return player;
     }
 
-    bool PlayerState::isDead() const
+    PlayerState::State PlayerState::getState() const
     {
-        return is_dead;
+        return state;
     }
 
-    void PlayerState::setDead(bool is_dead)
+    void PlayerState::setState(State state)
     {
-        this->is_dead = is_dead;
+        this->state = state;
+    }
+
+    bool PlayerState::isAlive() const
+    {
+        return state == State::NOT_STARTED || state == State::ALIVE;
     }
 } // namespace FEITENG

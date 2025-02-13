@@ -9,17 +9,26 @@ namespace FEITENG
 
     class PlayerState
     {
+    public:
+        enum class State
+        {
+            NOT_STARTED,
+            ALIVE,
+            DEAD
+        };
+
     private:
         Player* player;
-        bool is_dead;
+        State state;
 
     public:
         explicit PlayerState(Player*);
         ~PlayerState();
 
         Player* getPlayer() const;
-        bool isDead() const;
-        void setDead(bool);
+        State getState() const;
+        void setState(State);
+        bool isAlive() const;
     };
 } // namespace FEITENG
 
